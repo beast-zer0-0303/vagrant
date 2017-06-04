@@ -40,6 +40,16 @@ vagrant ssh
 vagrant ssh-config
 ```
 
+## ファイルの共有
+
+```
+# 共有用のディレクトリ作成
+mkdir src
+
+
+# ホストマシンからゲストマシンに同期
+vagrant rsync-auto
+```
 
 ## メモ
 
