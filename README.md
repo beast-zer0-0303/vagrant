@@ -53,10 +53,3 @@ $ vagrant package
 $ vagrant box add new_box package.box
 で利用できる。
 ```
-
-## TODO
-
-* vagrant up したら `Warning: Remote connection disconnect. Retrying` が表示されて ssh出来ない
-* 調査中
-
-

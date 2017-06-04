@@ -4,23 +4,23 @@
 test -f /etc/bootstrapped && exit
 
 # x64環境でx86バイナリを動かすパッケージ
-dpkg --add-architecture i386
-apt-get update
-apt-get install libc6:i386 libncurses5:i386 libstdc++6:i386
-apt-get install gcc-multilib g++-multilib
+sudo dpkg --add-architecture i386
+sudo apt-get update
+sudo apt-get install libc6:i386 libncurses5:i386 libstdc++6:i386
+sudo apt-get install gcc-multilib g++-multilib
 
 # ELF解析用
-apt-get install binutils
+sudo apt-get install binutils
 
 # Python，perl
-apt-get install python2.7 perl
+sudo apt-get install python2.7 perl
 
 # ROPガジェット探索用
 wget https://github.com/downloads/0vercl0k/rp/rp-lin-x86
 chmod +x rp-lin-x86; mv rp-lin-x86 /usr/local/bin
 
 # その他
-apt-get install binutils python2.7 perl socat git build-essential gdb gdbserver nasm
+sudo apt-get install binutils socat git build-essential gdb gdbserver nasm
 
 # gdb-peda導入
 git clone https://github.com/longld/peda.git ~/peda
